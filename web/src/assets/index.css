@@ -1,0 +1,40 @@
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both
+}
+.fl{
+  float: left;
+}
+.fr{
+  float:right;
+}
+.hide{
+  display: none !important;
+}
+.show{
+  display: block !important;
+}
+.flex-align-center{
+  display:flex;
+  align-items: center;
+}
+.copy-target{
+  position: absolute;
+  top: -100000px;
+}
+.color-666{
+  color:#666;
+}
+/*reset element-ui*/
+.el-icon-info{
+  margin-right: 3px;
+  /* color:#409EFF; */
+  color:#F56C6C;
+}
+.el-form-item.is-success .el-input__inner, .el-form-item.is-success .el-input__inner:focus, .el-form-item.is-success .el-textarea__inner, .el-form-item.is-success .el-textarea__inner:focus{
+  border-color:#409EFF !important;
+}
