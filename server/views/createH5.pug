@@ -1,0 +1,9 @@
+extends layout
+block content
+  - for(var i = 0; i < list.length; i++)
+    if path[i]
+      a(href=path[i]) #[img(class='bg-img' src='./' + list[i])]
+    else
+      img(
+        class='bg-img'
+        src='./' + list[i])
