@@ -1,4 +1,7 @@
+let Config = require('./config/index')
+
 module.exports = {
+  baseUrl: process.env.NODE_ENV === 'production' ? `${Config.baseUrl_production}/` : '/',
   devServer: {
     proxy: {
       '/api': {
