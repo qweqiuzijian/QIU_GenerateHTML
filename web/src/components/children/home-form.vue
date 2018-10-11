@@ -1,7 +1,12 @@
 <template>
   <el-card class="box-card" shadow="hover">
     <div slot="header" class="clearfix">
-      <span class="fl">页面配置</span>
+      <div class="fl">
+        页面配置
+        <el-button type="text">
+          ( <a href="https://tinypng.com/" target="blink">图片压缩</a> )
+        </el-button>
+      </div>
       <div class="fr flex-align-center" style="padding: 3px 0;margin-left:10px;">
         <el-tooltip content="预览后可以发布至腾讯云，返回页面访问地址" placement="bottom" effect="light">
           <i class="el-icon-info"></i>
