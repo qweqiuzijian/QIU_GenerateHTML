@@ -13,7 +13,7 @@ module.exports = {
       'uploads'
     ],
     log_date_format: "YYYY-MM-DD",
-    max_memory_restart: '1G',
+    max_memory_restart: '500M',
     env: {
       NODE_ENV: 'development'
     },
