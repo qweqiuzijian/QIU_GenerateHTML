@@ -2,7 +2,7 @@ module.exports = {
   apps : [{
     name: 'createH5',
     script: './bin/www',
-    args: 'test 123',
+    args: '',
     instances: 2,
     autorestart: true,
     watch: true,
