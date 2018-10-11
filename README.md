@@ -1,7 +1,16 @@
-项目位置
-/data/webroot/hjx-createH5
-启动项目
-server cd /server/run.sh
+项目部署
+安装node >> 安装进程守护工具 sudo npm install pm2 -g >> 配置nginx(详情如下) >> 目标位置（/data/webroot/hjx-createH5）拉取仓库代码sudo git clone http://release:release.hsb.com@git.huishoubao.com.cn/qiuzijian/hex-createH5.git hjx-createH5 >> 启动项目（cd /data/webroot/hjx-createH5/server）sudo ./run.sh
+
+配置nginx
+进入/etc/nginx/hjx/mba.huanjixia.com.conf 加以下配置
+location /createh5 {
+  alias     /data/webroot/hjx-createH5/web/dist/;
+  location ^~ /createh5/api/ {
+    #proxy_pass http://127.0.0.1:6969/;
+    proxy_pass http://119.29.141.207:6969/;
+  }
+}
+
 以下是pm2常用的命令行
 $ pm2 start app.js              # 启动app.js应用程序
 
