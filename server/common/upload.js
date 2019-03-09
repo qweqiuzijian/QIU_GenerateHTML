@@ -28,9 +28,14 @@ module.exports = {
           reject(err)
           return
         }
+        // console.log('resp', resp.body)
         let d = resp.body.data
+        if (typeof d !== 'object') {
+          reject(new Error('data is no object!'))
+          return
+        }
         if (!d.access_url) {
-          reject(d)
+          reject(new Error('access_url is not exist!'))
           return
         }
         const myURL = new URL(d.access_url)
